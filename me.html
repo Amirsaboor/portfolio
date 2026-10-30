@@ -1087,6 +1087,27 @@
       .card:hover {
         box-shadow: var(--sh-h);
       }
+      /* doubled spacing between sections / cards */
+      .wrap {
+        gap: calc(var(--gap) * 2);
+      }
+      #what {
+        gap: calc(var(--gap) * 2);
+      }
+      .slider .track {
+        gap: calc(var(--gap) * 2);
+      }
+      @media (min-width: 768px) {
+        .slider .slide {
+          flex-basis: calc(50% - var(--gap));
+        }
+      }
+      .sl-ctrl {
+        margin-top: calc(var(--gap) * 2);
+      }
+      .foot {
+        margin-top: calc(var(--gap) * 2);
+      }
     </style>
   </head>
   <body class="grain" id="top">
