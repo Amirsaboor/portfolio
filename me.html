@@ -973,6 +973,7 @@
           gap: 0.2rem;
         }
       }
+
       :focus-visible {
         outline: 2px solid var(--a);
         outline-offset: 2px;
@@ -1091,9 +1092,6 @@
       .wrap {
         gap: calc(var(--gap) * 2);
       }
-      #what {
-        gap: calc(var(--gap) * 2);
-      }
       .slider .track {
         gap: calc(var(--gap) * 2);
       }
@@ -1133,8 +1131,7 @@
           <span></span><span></span>
         </button>
         <div class="nav-links">
-          <a href="#about" data-i="nAbout">About</a><a href="#services" data-i="nServ">Services</a
-          ><a href="#experience" data-i="nExp">Experience</a
+          <a href="#about" data-i="nAbout">About</a><a href="#experience" data-i="nExp">Experience</a
           ><a href="#education" data-i="nEdu">Education</a
           ><a href="#projects" data-i="nProj">Projects</a
           ><a href="#contact" data-i="nContact">Contact</a>
@@ -1151,14 +1148,6 @@
               <circle cx="12" cy="8" r="4" />
               <path d="M4 21a8 8 0 0 1 16 0" /></svg></span
           ><span data-i="nAbout">About</span
-          ><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg
-        ></a>
-        <a href="#services"
-          ><span class="mi"
-            ><svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="m12 2 10 5-10 5L2 7z" />
-              <path d="m2 17 10 5 10-5M2 12l10 5 10-5" /></svg></span
-          ><span data-i="nServ">Services</span
           ><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" /></svg
         ></a>
         <a href="#experience"
@@ -1220,7 +1209,7 @@
                 class="caret"
                 data-tw
                 data-en="modern web apps|React interfaces|Next.js products|accessible UIs"
-                data-fa="وب‌اپ‌های مدرن|رابط‌های React|محصولات Next.js|رابط‌های سریع"
+                data-fa="وب‌اپ مدرن می‌سازم|رابط React می‌سازم|محصول Next.js می‌سازم|رابط روان می‌سازم"
               ></span
             ></span>
           </h1>
@@ -1339,15 +1328,6 @@
         <div id="termbody" class="mono text-[13px] space-y-2 min-h-[290px]"></div>
       </section>
 
-      <div id="services" class="md:col-span-6 head reveal">
-        <p class="label" data-i="whatL"></p>
-        <h2
-          class="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 leading-tight max-w-3xl"
-          data-i="whatT"
-        ></h2>
-      </div>
-      <div class="md:col-span-6 sub sm:grid-cols-2 lg:grid-cols-4" id="what"></div>
-
       <section class="card reveal md:col-span-6" id="experience">
         <div class="flex flex-wrap items-end justify-between gap-3">
           <div><p class="label" data-i="expL"></p></div>
@@ -1389,6 +1369,8 @@
           </div>
         </div>
       </section>
+
+      
 
       <div id="projects" class="md:col-span-6 head flex items-end justify-between gap-3">
         <h2 class="text-3xl sm:text-4xl font-bold" data-i="projH"></h2>
@@ -1896,8 +1878,7 @@
     <script>
       addT({
         title: ['Amir Saboor — Frontend Developer', 'امیر صبور — برنامه‌نویس فرانت‌اند'],
-        nAbout: ['About', 'درباره'],
-        nServ: ['Services', 'خدمات'],
+        nAbout: ['About', 'درباره‌ی من'],
         nEdu: ['Education', 'تحصیلات'],
         nExp: ['Experience', 'سوابق'],
         nProj: ['Projects', 'پروژه‌ها'],
@@ -1908,22 +1889,16 @@
           'Hi, I\'m <span class="grad">Amir</span>.',
           'سلام، من <span class="grad">امیر</span> هستم.',
         ],
-        ibuild: ['I build', 'می‌سازم'],
+        ibuild: ['I build', 'توسعه‌دهنده‌ی فرانت‌اند'],
         heroP: [
           'Software Engineering graduate and frontend developer at Mahan Informatic. I build fast, accessible and scalable web apps with React and Next.js — component-based, clean and performance-first.',
-          'فارغ‌التحصیل مهندسی نرم‌افزار و برنامه‌نویس فرانت‌اند در انفورماتیک ماهان. اپلیکیشن‌های وب سریع، در دسترس و مقیاس‌پذیر با React و Next.js می‌سازم — کامپوننت‌محور، تمیز و با تمرکز بر عملکرد.',
+          'فارغ‌التحصیل مهندسی نرم‌افزار هستم و در انفورماتیک ماهان فعالیت می‌کنم. با React و Next.js وب‌اپ‌هایی سریع، دسترس‌پذیر و مقیاس‌پذیر می‌سازم؛ با کدی تمیز، کامپوننت‌محور و توجه ویژه به عملکرد.',
         ],
         seeWork: ['See my work ↓', 'نمونه‌کارها ↓'],
         allLinks: ['All my links →', 'همه‌ی لینک‌ها ←'],
-        sRepos: ['Repos', 'مخزن'],
+        sRepos: ['Repos', 'ریپو'],
         sBig: ['Big apps', 'پروژه‌ی بزرگ'],
-        sExp: ['Years exp.', 'سال سابقه'],
-        whatL: ['What I do', 'کارهایی که می‌کنم'],
-        whatT: [
-          'Interfaces that are fast, <span class="grad">clear</span> and built to last.',
-          'رابط‌هایی سریع، <span class="grad">روشن</span> و ماندگار.',
-        ],
-        expL: ['Experience', 'سوابق کاری'],
+        sExp: ['Years exp.', 'سال سابقه'],        expL: ['Experience', 'سوابق کاری'],
         eduL: ['Education', 'تحصیلات'],
         edu1t: ['B.Sc. Software Engineering', 'کارشناسی مهندسی نرم‌افزار'],
         edu2t: ['Associate Degree, Software', 'کاردانی نرم‌افزار'],
@@ -1934,7 +1909,7 @@
         c1t: ['Frontend Development', 'توسعه‌ی فرانت‌اند'],
         c1d: ['Coding Front · 4 months', 'کدینگ فرانت · ۴ ماه'],
         c1y: ['2023', '۱۴۰۲'],
-        c2d: ['Tehran Technical Complex · 1 year', 'مجتمع فنی تهران · ۱ سال'],
+        c2d: ['Tehran Technical Complex · 1 year', 'مجتمع فنی تهران · یک سال'],
         c2y: ['2022', '۱۴۰۱'],
         langFa: [
           FLAG.fa.replace('class="flag"', 'class="flag flag-inline"') + 'Persian · native',
@@ -1947,23 +1922,23 @@
         projH: ['Selected projects', 'پروژه‌های منتخب'],
         allRepos: ['All repos →', 'همه‌ی ریپوها ←'],
         live: ['● Live ↗', '● آنلاین ↖'],
-        p1t: ['01 · E-commerce', '۰۱ · فروشگاه آنلاین'],
+        p1t: ['01 · E-commerce', '۰۱ · فروشگاه اینترنتی'],
         p1n: ['Nafis Leather', 'چرم نفیس'],
         p1d: [
           'Online store for a Mashhad leather brand with 6 branches: product catalog, discounts, cart & checkout, gift cards, customer club, branch maps and an admin area.',
-          'فروشگاه آنلاین یک برند چرم مشهدی با ۶ شعبه: کاتالوگ محصولات، تخفیف‌ها، سبد خرید و پرداخت، کارت هدیه، باشگاه مشتریان، نقشه‌ی شعب و بخش مدیریت.',
+          'فروشگاه اینترنتی یک برند چرم مشهدی با ۶ شعبه؛ شامل کاتالوگ محصولات، تخفیف‌ها، سبد خرید و پرداخت، کارت هدیه، باشگاه مشتریان، نقشه‌ی شعبه‌ها و پنل مدیریت.',
         ],
-        p2t: ['02 · Venue platform', '۰۲ · پلتفرم تالار'],
+        p2t: ['02 · Venue platform', '۰۲ · پلتفرم تالارها'],
         p2n: ['Talargah', 'تالارگاه'],
         p2d: [
           'Banquet-hall discovery platform: URL-driven filters (city, capacity, budget, rating), live search, pagination, 360° venue viewer, dynamic metadata, sitemap and JSON-LD.',
-          'پلتفرم جست‌وجوی تالار: فیلترهای مبتنی بر URL (شهر، ظرفیت، بودجه، امتیاز)، جست‌وجوی زنده، صفحه‌بندی، نمایشگر ۳۶۰ درجه، متادیتای پویا، سایت‌مپ و JSON-LD.',
+          'پلتفرم جست‌وجوی تالارهای پذیرایی با فیلترهای مبتنی بر URL (شهر، ظرفیت، بودجه و امتیاز)، جست‌وجوی زنده، صفحه‌بندی، نمایشگر ۳۶۰ درجه، متادیتای پویا، سایت‌مپ و JSON-LD.',
         ],
         p3t: ['03 · Dashboard', '۰۳ · داشبورد'],
         p3n: ['OKR Management', 'مدیریت OKR'],
         p3d: [
           'Goals & key-results dashboard with departments, goal tree view, meetings, requests and reports — charts, role-based management and a Jalali date picker.',
-          'داشبورد اهداف و نتایج کلیدی با واحدها، نمای درختی اهداف، جلسات، درخواست‌ها و گزارش‌ها — نمودار، مدیریت نقش‌ها و تقویم شمسی.',
+          'داشبورد مدیریت اهداف و نتایج کلیدی (OKR) با واحدهای سازمانی، نمای درختی اهداف، جلسات، درخواست‌ها و گزارش‌ها؛ همراه با نمودار، مدیریت نقش‌ها و تقویم شمسی.',
         ],
         lrnL: ['Learning roadmap', 'نقشه‌ی راه یادگیری'],
         lrnT: [
@@ -1983,63 +1958,23 @@
           'Rules I follow: one real project per topic · write code instead of only watching · debug it, break it, learn from it · understand deeply, not on the surface.',
           'قوانینی که رعایت می‌کنم: برای هر مبحث یک پروژه‌ی واقعی · کد بنویس، نه فقط تماشا · اشکال‌زدایی کن، خرابش کن و از آن یاد بگیر · عمیق یاد بگیر، نه سطحی.',
         ],
-        ctL: ['Contact', 'تماس'],
+        ctL: ['Contact', 'ارتباط با من'],
         ctH: [
           'Have a project?<br>Let\'s <span class="underline decoration-4 underline-offset-8">talk.</span>',
-          'پروژه‌ای در ذهن داری؟<br><span class="underline decoration-4 underline-offset-8">حرفش را بزنیم.</span>',
+          'پروژه‌ای داری؟<br>بیا <span class="underline decoration-4 underline-offset-8">با هم بسازیمش.</span>',
         ],
         ctP: [
           "I'm open to frontend roles, freelance work and interesting collaborations. Drop me a message — I usually reply fast.",
-          'برای موقعیت‌های فرانت‌اند، پروژه‌های فریلنسری و همکاری‌های جذاب آماده‌ام. پیام بده — معمولاً سریع جواب می‌دهم.',
+          'برای یک موقعیت شغلی، یک پروژه‌ی فریلنسری یا هر ایده‌ی جالبی که داری، پیام بده؛ معمولاً زود جواب می‌دهم.',
         ],
         avail: ['Available for work', 'آماده‌ی همکاری'],
         city: ['Mashhad', 'مشهد'],
-        fastest: ['fastest', 'سریع‌ترین راه'],
-        inTouch: ["Let's connect", 'بیا در ارتباط باشیم'],
+        fastest: ['fastest', 'سریع‌ترین راه ارتباط'],
+        inTouch: ["Let's connect", 'با من در ارتباط باش'],
         mailL: ['Email', 'ایمیل'],
         foot: ['© <span data-year></span> Amir Saboor', '© <span data-year></span> امیر صبور'],
         links: ['links', 'لینک‌ها'],
       });
-
-      /* ---------- what I do ---------- */
-      const WHAT = [
-        ['01', 'w1', ['React', 'Next.js', 'TypeScript']],
-        ['02', 'w2', ['Tailwind', 'shadcn/ui', 'MUI']],
-        ['03', 'w3', ['REST API', 'Redux', 'Context API']],
-        ['04', 'w4', ['SSR', 'Metadata', 'JSON-LD']],
-      ];
-      addT({
-        w1t: ['Product frontends', 'محصولات فرانت‌اند'],
-        w1d: [
-          'Complete web apps from UI to data: routing, forms, dashboards and admin panels in React and Next.js.',
-          'اپلیکیشن‌های کامل وب از رابط کاربری تا داده: مسیریابی، فرم‌ها، داشبورد و پنل ادمین با React و Next.js.',
-        ],
-        w2t: ['Design-system UI', 'رابط کاربری مبتنی بر Design System'],
-        w2d: [
-          'Responsive, accessible interfaces assembled from reusable, well-named components.',
-          'رابط‌های واکنش‌گرا و در دسترس که از کامپوننت‌های قابل‌استفاده‌ی مجدد ساخته می‌شوند.',
-        ],
-        w3t: ['Data & state', 'داده و state'],
-        w3d: [
-          'REST integration, caching, filters that live in the URL, and predictable client state.',
-          'اتصال به REST API، کش، فیلترهایی که در URL زندگی می‌کنند و state قابل‌پیش‌بینی.',
-        ],
-        w4t: ['Performance & SEO', 'عملکرد و سئو'],
-        w4d: [
-          'Server rendering, dynamic metadata, sitemaps, JSON-LD and lean bundles.',
-          'رندر سمت سرور، متادیتای پویا، سایت‌مپ، JSON-LD و باندل‌های سبک.',
-        ],
-      });
-      function drawWhat() {
-        document.getElementById('what').innerHTML = WHAT.map(
-          ([n, k, tags]) => `
-    <div class="card reveal in flex flex-col gap-5 min-h-[230px]">
-      <span class="mono text-5xl font-bold grad">${fmt(n)}</span>
-      <div class="flex flex-col flex-1"><h3 class="text-xl sm:text-2xl font-bold">${tr(k + 't')}</h3><p class="mut mt-2">${tr(k + 'd')}</p>
-      <div class="flex flex-wrap gap-2 mt-auto pt-4" dir="ltr">${tags.map((x) => `<span class="chip">${x}</span>`).join('')}</div></div>
-    </div>`,
-        ).join('');
-      }
 
       /* ---------- experience (durations computed from today) ---------- */
       const now = new Date();
@@ -2072,11 +2007,11 @@
           pts: [
             [
               'Building production web frontends with React and Next.js.',
-              'ساخت فرانت‌اند اپلیکیشن‌های وب production با React و Next.js.',
+              'توسعه‌ی رابط کاربری اپلیکیشن‌های وب با React و Next.js.',
             ],
             [
               'Delivered the Nafis Leather e-commerce store: catalog, cart & checkout, gift cards, customer club and branch maps.',
-              'توسعه‌ی فروشگاه آنلاین چرم نفیس: کاتالوگ، سبد خرید و پرداخت، کارت هدیه، باشگاه مشتریان و نقشه‌ی شعب.',
+              'پیاده‌سازی فروشگاه اینترنتی چرم نفیس شامل کاتالوگ، سبد خرید و پرداخت، کارت هدیه، باشگاه مشتریان و نقشه‌ی شعبه‌ها.',
             ],
           ],
           tags: ['React', 'Next.js', 'Tailwind', 'shadcn/ui'],
@@ -2085,30 +2020,30 @@
           role: ['Website Admin (Military Service)', 'ادمین وب‌سایت (امریه‌ی سربازی)'],
           co: [
             'Astan Quds Razavi — Artistic Creations Institute',
-            'موسسه آفرینش‌های هنری آستان قدس رضوی',
+            'مؤسسه‌ی آفرینش‌های هنری آستان قدس رضوی',
           ],
           per: ['Apr 2022 — Apr 2024', 'اردیبهشت ۱۴۰۱ — اردیبهشت ۱۴۰۳'],
           months: 24,
           pts: [
             [
               'Managed the online art store: created products and followed up site orders.',
-              'مدیریت فروشگاه آنلاین هنری: ایجاد محصول و پیگیری سفارش‌های سایت.',
+              'مدیریت فروشگاه اینترنتی آثار هنری؛ ثبت محصولات و پیگیری سفارش‌های سایت.',
             ],
-            ['Handled sales and order accounting.', 'انجام امور مالی فروش و سفارش‌ها.'],
+            ['Handled sales and order accounting.', 'رسیدگی به حسابداری فروش و سفارش‌ها.'],
           ],
           tags: ['E-commerce', 'WordPress'],
         },
         {
-          role: ['Online Store Admin', 'ادمین سایت فروشگاهی'],
+          role: ['Online Store Admin', 'مدیر فروشگاه اینترنتی'],
           co: ['Baharan Bartar Turang Co.', 'شرکت بهاران برتر تورنگ'],
           per: ['Jan 2021 — Apr 2022', 'بهمن ۱۳۹۹ — اردیبهشت ۱۴۰۱'],
           months: 15,
           pts: [
             [
               'Ran online sales of protein products and supported customers.',
-              'فروش آنلاین محصولات پروتئینی و پشتیبانی مشتریان.',
+              'فروش اینترنتی محصولات پروتئینی و پشتیبانی از مشتریان.',
             ],
-            ['Handled sales accounting.', 'انجام امور مالی فروش.'],
+            ['Handled sales accounting.', 'رسیدگی به حسابداری فروش.'],
           ],
           tags: ['E-commerce'],
         },
@@ -2280,7 +2215,7 @@
   stack: ["React", "Next.js", "TypeScript"],
   location: "Mashhad, Iran",
   openToWork: true,
-  learning: "Senior Next.js",
+  learning: "Advanced Next.js",
 };
 
 // ship fast, keep it clean
@@ -2415,9 +2350,9 @@ export default function Hire() {
         build();
       })();
 
+
       /* ---------- boot + re-render on language change ---------- */
       onLang(() => {
-        drawWhat();
         drawExp();
         drawContact();
         /* drawRoad(); */ tick();
